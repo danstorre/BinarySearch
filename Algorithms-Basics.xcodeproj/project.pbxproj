@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FBA538132A8D55D200D812C9 /* Algorithms_Basics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */; };
-		FBA538182A8D55D200D812C9 /* Algorithms_BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538172A8D55D200D812C9 /* Algorithms_BasicsTests.swift */; };
 		FBA538192A8D55D200D812C9 /* Algorithms_Basics.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBA538232A8D55FB00D812C9 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538222A8D55FB00D812C9 /* BinarySearch.swift */; };
+		FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA538242A8D576500D812C9 /* BinarySearchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +27,8 @@
 		FBA5380A2A8D55D200D812C9 /* Algorithms_Basics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithms_Basics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithms_Basics.h; sourceTree = "<group>"; };
 		FBA538122A8D55D200D812C9 /* Algorithms-BasicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algorithms-BasicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBA538172A8D55D200D812C9 /* Algorithms_BasicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms_BasicsTests.swift; sourceTree = "<group>"; };
+		FBA538222A8D55FB00D812C9 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		FBA538242A8D576500D812C9 /* BinarySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA5380D2A8D55D200D812C9 /* Algorithms_Basics.h */,
+				FBA538222A8D55FB00D812C9 /* BinarySearch.swift */,
 			);
 			path = "Algorithms-Basics";
 			sourceTree = "<group>";
@@ -77,7 +80,7 @@
 		FBA538162A8D55D200D812C9 /* Algorithms-BasicsTests */ = {
 			isa = PBXGroup;
 			children = (
-				FBA538172A8D55D200D812C9 /* Algorithms_BasicsTests.swift */,
+				FBA538242A8D576500D812C9 /* BinarySearchTests.swift */,
 			);
 			path = "Algorithms-BasicsTests";
 			sourceTree = "<group>";
@@ -144,9 +147,11 @@
 				TargetAttributes = {
 					FBA538092A8D55D200D812C9 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					FBA538112A8D55D200D812C9 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -191,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA538232A8D55FB00D812C9 /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBA538182A8D55D200D812C9 /* Algorithms_BasicsTests.swift in Sources */,
+				FBA538252A8D576500D812C9 /* BinarySearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +341,7 @@
 		FBA5381D2A8D55D200D812C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -359,6 +366,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -366,6 +374,7 @@
 		FBA5381E2A8D55D200D812C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -397,6 +406,8 @@
 		FBA538202A8D55D200D812C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AEWQUX8MPM;
@@ -405,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danstorre.Algorithms-BasicsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -412,6 +424,8 @@
 		FBA538212A8D55D200D812C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AEWQUX8MPM;
